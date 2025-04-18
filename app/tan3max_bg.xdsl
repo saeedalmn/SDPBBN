@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="train_" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="S9_Overall_experience">
+			<state id="Bad" />
+			<state id="Good" />
+			<probabilities>0.7578616352201258 0.2421383647798742</probabilities>
+		</cpt>
+		<cpt id="S5_Your_care_and_treatment">
+			<state id="Bad" />
+			<state id="Good" />
+			<parents>S9_Overall_experience</parents>
+			<probabilities>0.9626556016597511 0.03734439834024896 0.2077922077922078 0.7922077922077922</probabilities>
+		</cpt>
+		<cpt id="S3_Doctors">
+			<state id="Bad" />
+			<state id="Good" />
+			<state id="Acceptable" />
+			<parents>S5_Your_care_and_treatment S9_Overall_experience</parents>
+			<probabilities>0.5121602288984263 0.001430615164520744 0.4864091559370529 0.2549019607843137 0.0196078431372549 0.7254901960784313 0.1111111111111111 0.1111111111111111 0.7777777777777777 0.005376344086021505 0.4892473118279569 0.5053763440860215</probabilities>
+		</cpt>
+		<cpt id="S8_Respect_and_dignity">
+			<state id="Bad" />
+			<state id="Good" />
+			<state id="Acceptable" />
+			<parents>S3_Doctors S9_Overall_experience</parents>
+			<probabilities>0.4903581267217631 0.002754820936639119 0.5068870523415978 0.06666666666666667 0.4666666666666667 0.4666666666666667 0.1666666666666667 0.6666666666666667 0.1666666666666667 0.01075268817204301 0.9139784946236561 0.07526881720430109 0.1333333333333333 0.05833333333333333 0.8083333333333333 0.007575757575757576 0.5757575757575758 0.4166666666666666</probabilities>
+		</cpt>
+		<cpt id="S4_Nurses">
+			<state id="Bad" />
+			<state id="Good" />
+			<state id="Acceptable" />
+			<parents>S8_Respect_and_dignity S9_Overall_experience</parents>
+			<probabilities>0.9122807017543861 0.004385964912280702 0.08333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.03703703703703703 0.03703703703703703 0.9259259259259259 0.005952380952380952 0.4523809523809523 0.5416666666666666 0.2788259958071279 0.00209643605870021 0.7190775681341719 0.0144927536231884 0.0144927536231884 0.9710144927536231</probabilities>
+		</cpt>
+		<cpt id="S1_Admission_to_hospital">
+			<state id="Bad" />
+			<state id="Good" />
+			<parents>S4_Nurses S9_Overall_experience</parents>
+			<probabilities>0.8761061946902655 0.1238938053097345 0.5 0.5 0.5 0.5 0.04 0.96 0.640625 0.359375 0.3846153846153846 0.6153846153846154</probabilities>
+		</cpt>
+		<cpt id="S2_The_hospital_and_ward">
+			<state id="Bad" />
+			<state id="Good" />
+			<parents>S4_Nurses S9_Overall_experience</parents>
+			<probabilities>0.9956140350877193 0.004385964912280702 0.5 0.5 0.5 0.5 0.04 0.96 0.9296875 0.0703125 0.5384615384615385 0.4615384615384616</probabilities>
+		</cpt>
+		<cpt id="S6_Leaving_the_hospital">
+			<state id="Bad" />
+			<state id="Good" />
+			<parents>S3_Doctors S9_Overall_experience</parents>
+			<probabilities>0.975 0.025 0.75 0.25 0.25 0.75 0.01612903225806452 0.9838709677419355 0.9083333333333333 0.09166666666666666 0.4651162790697674 0.5348837209302325</probabilities>
+		</cpt>
+		<cpt id="S7_Feedback_on_quality_of_care">
+			<state id="Bad" />
+			<state id="Good" />
+			<parents>S6_Leaving_the_hospital S9_Overall_experience</parents>
+			<probabilities>0.6769911504424778 0.3230088495575221 0.4347826086956522 0.5652173913043478 0.96875 0.03125 0.611111111111111 0.3888888888888888</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.4830.0 ACADEMIC" name="train_">
+			<node id="S1_Admission_to_hospital">
+				<name>S1_Admission_to_hospital</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>714 177 786 225</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="S2_The_hospital_and_ward">
+				<name>S2_The_hospital_and_ward</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>644 252 716 300</position>
+				<barchart active="true" />
+			</node>
+			<node id="S3_Doctors">
+				<name>S3_Doctors</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>489 259 561 307</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="S4_Nurses">
+				<name>S4_Nurses</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>602 373 674 421</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="S5_Your_care_and_treatment">
+				<name>S5_Your_care_and_treatment</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>534 157 606 205</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="S6_Leaving_the_hospital">
+				<name>S6_Leaving_the_hospital</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>324 218 396 266</position>
+				<barchart active="true" />
+			</node>
+			<node id="S7_Feedback_on_quality_of_care">
+				<name>S7_Feedback_on_quality_of_care</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>372 124 444 172</position>
+				<barchart active="true" />
+			</node>
+			<node id="S8_Respect_and_dignity">
+				<name>S8_Respect_and_dignity</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>360 337 432 385</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="S9_Overall_experience">
+				<name>S9_Overall_experience</name>
+				<interior color="ffff80" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>529 55 601 103</position>
+				<barchart active="true" />
+			</node>
+			<textbox>
+				<caption>Input file: train_\nData rows: 318\nElapsed time: 0.047s\n\nLearning algorithm: Tree Augmented Naive Bayes\nAlgorithm parameters:\nClass variable: S9_Overall_experience\nSeed: 0\nMax search time: 0\n\nEM Log Likelihood: -1340.35</caption>
+				<font color="000000" name="Arial" size="8" />
+				<position>10 222 247 376</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>
