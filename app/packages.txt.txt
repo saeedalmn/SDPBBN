@@ -1,0 +1,4 @@
+cmake
+build-essential
+libeigen3-dev
+python3-dev
