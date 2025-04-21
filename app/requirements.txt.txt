@@ -1,4 +1,4 @@
 streamlit
-pyAgrum==1.17.2
+pyagrum==1.17.2
 pandas
 Pillow
