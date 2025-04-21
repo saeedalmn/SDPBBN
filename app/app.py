@@ -1,5 +1,5 @@
-import pyAgrum as gum
-import pyAgrum.lib.image as gimg
+import pyagrum as gum
+import pyagrum.lib.image as gimg
 import pandas as pd
 import streamlit as st
 from PIL import Image
